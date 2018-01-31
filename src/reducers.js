@@ -21,11 +21,11 @@ export function characterReducer(state = initialState, action) {
   } else if (action.type === SEARCH_CHARACTERS_SUCCESS) {
     console.log('search success inside reducer');
     //characters: data?
-    return {...state, characters: action.characters, loading: false }; 
+    return {...state, characters: action.characters, loading: false };
 
   } else if (action.type === SEARCH_CHARACTERS_ERROR) {
     // return Object.assign({},state, {});
-    return {...state, error: action.error };
+    return {...state, error: action.error, loading: false };
 
   }
   return state;
