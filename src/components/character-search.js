@@ -7,7 +7,7 @@ export class CharacterSearch extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log(searchCharacters);
-    this.props.dispatch(searchCharacters(event.target.value));
+    this.props.dispatch(searchCharacters(this.input.value));
   }
   renderResults() {
     if (this.props.loading) {
